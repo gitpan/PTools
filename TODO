@@ -1,0 +1,21 @@
+#
+# File:  TODO
+# Desc:  List of ToDo's for PTools:: distribution
+#
+
+. Add more tests, especially for:
+  -  PTools::Extender
+  -  PTools::Options
+  -  PTools::Proc::Backtick
+  -  PTools::Proc::Daemonize
+  -  PTools::Proc::Run
+
+. Create man pages for:
+  -  PTools::RedirectIO
+  -  PTools::WordWrap
+  -  PTools::Proc::Run
+
+. Update documentation on PTools website
+  -  rearrange modules under new name space
+  -  correct any mention of module names
+

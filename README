@@ -1,0 +1,64 @@
+PTools version 0.01
+===================
+
+PTools is a collection of Perl Tools for Perl Tool Developers. These
+meta-tools have evolved over the years to simplify the normal, everyday
+types of tasks that most scripts, at some point, need to address.
+
+PTools includes a couple of modules that implement a flexible, multi-tier
+library heirarchy for larger applications that makes the development
+and evolution of modules and apps a lot easier. These also allow for
+completely relocatable Perl scripts without modification to directory
+paths, and allow close integration with Web CGI and/or document URLs. 
+
+PTools includes a module that allows module creators to create
+'extendible' methods. This allows users of their modules to choose
+what class will actually get invoked when a method is called. What's
+this good for? Deciding during run-time what class is used to 'sort()' 
+data in a given application, or deciding what class is used to
+'lock()' and 'unlock()' a resource to prevent concurrency issues.
+
+PTools also includes such things as 
+a module to handle the counters in an application (with nice formatting);
+a module to easily turn a script into a daemon process; 
+a module to temporarialy redirect stdout and/or stderr to a string or an array;
+OO interfaces to Getopt::Long, Date::Format and Date::Parse 
+(with some added value).
+
+See example scripts under the 'eg' subdirectory included with this 
+distribution.
+
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+
+DEPENDENCIES
+
+Standard modules used include the following.
+
+   Carp           POSIX
+   Exporter       Test::More
+   Fcntl          strict
+   Getopt::Long   warnings
+
+Additional modules used include the following.
+
+   Date::Format   - 2.22 or later
+   Date::Parse    - 2.23 or later
+   Getopt::Long   - 2.17 or later
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 1999-2007 by Chris Cobb
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.8 or,
+at your option, any later version of Perl 5 you may have available.
+
