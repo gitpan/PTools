@@ -2,7 +2,6 @@
 #
 # File:  PTools/Proc/Daemonize.pm
 # Desc:  Turn a script into a daemon process
-# Auth:  Chris Cobb <nospamplease@ccobb.net>
 # Date:  Mon Oct 25 08:44:09 2004
 # Stat:  Production
 #
@@ -716,7 +715,7 @@ See L<POSIX> and L<Fcntl>.
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>nospamplease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]
 
 =head1 COPYRIGHT
 

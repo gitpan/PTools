@@ -3,7 +3,16 @@
 
 #########################
 
-use Test::More tests => 4;
+#### use Test::More tests => 4;
+
+use Test::More;
+BEGIN { 
+    eval "require Date::Parse";
+    if (! defined $INC{'Date/Parse.pm'} ) {
+       plan skip_all => "dependency/ies not met";
+    }
+    plan tests => 4;
+}
 
 BEGIN { use_ok('PTools::Date::Parse') };               # 01
 

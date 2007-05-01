@@ -1,6 +1,9 @@
 Revision history for Perl extension PTools.
 
-0.01  Sun Mar 18 11:44:53 2007
-	- original version; created by h2xs 1.23 with options
-		-AX --skip-exporter --use-new-tests -n PTools -b 5.6.1
+00.02  Sun Mar 25 13:03:29 2007
+	- updated documentation
+	- added 'eg/relocatable.pl' to script examples
+
+00.01  Sun Mar 18 11:44:53 2007
+	- original release to CPAN
 

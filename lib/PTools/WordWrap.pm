@@ -188,4 +188,4 @@ PTools::WordWrap - Format text strings
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>nospamplease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]

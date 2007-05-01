@@ -4,7 +4,7 @@
 # Desc:  Include a Perl module via "use", "require" or "eval" and detect errs.
 #        Emits HTML when run via a Web CGI script; emits plain text otherwise.
 # Date:  Wed Nov 22 12:50:00 PST 2000
-# Date:  Thu Aug 16 10:06:58 PDT 2001  - added "eval" method <cobb@cup.hp.com>
+# Date:  Thu Aug 16 10:06:58 PDT 2001  - added "eval" method
 # Stat:  Production
 # Note:  Perl's "$@" variable contains the first error detected 
 #        when using or requiring a module, not the 1st warning.
@@ -419,7 +419,7 @@ No classes currently inherit from this class.
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>nospamplease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]
 
 =head1 COPYRIGHT
 

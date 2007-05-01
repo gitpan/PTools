@@ -2,7 +2,6 @@
 #
 # File:  PTools/Verbose.pm
 # Desc:  A light-weight class to add verbose levels to Perl scripts/modules.
-# Auth:  Chris Cobb, Hewlett-Packard, Cupertino, CA  <chris.cobb@hp.com>
 # Date:  Thu Oct 14 01:55:12 2004
 # Stat:  Production
 #
@@ -304,7 +303,7 @@ See L<Debug>.
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>nospamplease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]
 
 =head1 COPYRIGHT
 

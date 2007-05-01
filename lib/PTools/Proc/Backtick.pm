@@ -2,7 +2,6 @@
 #
 # File:  PTools/Proc/Backtick.pm
 # Desc:  Simple OO interface to system commands
-# Auth:  Chris Cobb <nospamplease@ccobb.net>
 # Date:  Mon Apr 02 14:30:00 PDT 2001
 # Stat:  Production
 # Usage:
@@ -137,7 +136,7 @@ See L<PTools::Proc::Status>.
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>nospamplease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]
 
 =head1 COPYRIGHT
 

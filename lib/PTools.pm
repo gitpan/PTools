@@ -11,7 +11,7 @@ use warnings;
 use Carp qw( croak );
 
 our $PACK = "__PACKAGE__";
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 our @ISA = qw();
 
 sub import
@@ -40,7 +40,7 @@ __END__
 
 =head1 NAME
 
-PTools - Facilitates 'using' PTools utility modules
+PTools - Tools for Perl Tool Developers
 
 =head1 SYNOPSIS
 
@@ -104,7 +104,7 @@ page for that module.
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>NoSpamPlease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]
 
 =head1 COPYRIGHT AND LICENSE
 

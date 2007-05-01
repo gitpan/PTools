@@ -91,7 +91,11 @@ sub inc {
 
 sub write {
     my $self = shift;
-    die "&Makefile->write() takes no arguments\n" if @_;
+    #-------------------------------------------------------------------
+    # hack by ccobb on Mon Apr 30 06:06:26 2007
+  ##die "&Makefile->write() takes no arguments\n" if @_;
+    my $meta = shift;
+    #-------------------------------------------------------------------
 
     my $args = $self->makemaker_args;
     $args->{DISTNAME} = $self->name;
@@ -105,9 +109,13 @@ sub write {
         $args->{ABSTRACT} = $self->abstract;
         $args->{AUTHOR}   = $self->author;
     }
-    if ( eval($ExtUtils::MakeMaker::VERSION) >= 6.10 ) {
-        $args->{NO_META} = 1;
-    }
+    #-------------------------------------------------------------------
+    # hack by ccobb on Mon Apr 30 06:06:26 2007
+    $args->{NO_META} = ( $meta ? 0 : 1 );
+  ##if ( eval($ExtUtils::MakeMaker::VERSION) >= 6.10 ) {
+  ##    $args->{NO_META} = 1;
+  ##}
+    #-------------------------------------------------------------------
     if ( eval($ExtUtils::MakeMaker::VERSION) > 6.17 and $self->sign ) {
         $args->{SIGN} = 1;
     }

@@ -135,7 +135,7 @@ A simple little class to generate and validate Unix-style passwords.
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>nospamplease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]
 
 (Adapted from "Object Oriented Perl" by Damian Conway, Chap. 4)
 

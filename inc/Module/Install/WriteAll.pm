@@ -35,7 +35,11 @@ sub WriteAll {
         if ($args{inline}) {
             $self->Inline->write;
         } else {
-            $self->Makefile->write;
+        #---------------------------------------------------------------
+        # hack by ccobb on Mon Apr 30 06:06:26 2007
+        ### $self->Makefile->write;
+            $self->Makefile->write ( $args{meta} );
+        #---------------------------------------------------------------
         }
     }
 }

@@ -28,6 +28,10 @@ is( $global->param('libdir'), undef, "Global reset okay");    # 07
 #------------
 
 chomp( $expected = `hostname`);
+
+# Workaround for machines w/bad hostname
+($expected = $1) if ($expected =~ m#^([^\.]*)\.#);
+
 is( $global->getHostname(), $expected, "Global getHostname() ok"),  # 08
 
 ## $expected = "";

@@ -2,7 +2,6 @@
 #
 # File:  PTools/Date/Format.pm
 # Desc:  Modifies the interface and behavior of the "Date::Format" class
-# Auth:  Chris Cobb <nospamplease@ccobb.net>
 # Date:  Fri Jul 09 14:13:24 2004
 # Stat:  Production
 #
@@ -287,7 +286,7 @@ See L<Date::Format>.
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>nospamplease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]
 
 =head1 COPYRIGHT
 

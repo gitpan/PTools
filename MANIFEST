@@ -1,6 +1,7 @@
 Changes
 Makefile.PL
 MANIFEST
+META.yml
 README
 TODO
 t/PTools.t
@@ -45,11 +46,10 @@ lib/PTools/Verbose.pm
 lib/PTools/WordWrap.pm
 eg/datefmt.pl
 eg/counter.pl
-eg/genpass.pl
-eg/datefmt.pl
-eg/passwd.pl
-eg/options.pl
 eg/debug.pl
+eg/genpass.pl
+eg/options.pl
+eg/relocatable.pl
 eg/runProc.pl
 eg/redirectIO.pl
 eg/timeelapse.pl

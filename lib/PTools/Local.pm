@@ -276,37 +276,42 @@ almost never need to change if/when they are moved to an entirely
 different directory subtree (assuming, of course, that all the related
 subdirectories remain in the relative position).
 
-  use lib "/my/lib";   # if/when PTools::Local not under "site_perl"
-  use PTools::Local;   # do this before 'use'ing other modules
-  use Whatever;        # whatever else your application uses
+  use strict;           # strict and/or warnings can always go first
+  use PTools::Local;    # do this before 'use'ing other applic. modules
+  use lib "legacy/lib"; # modules here will be included before others
+  use Whatever;         # then use whatever else your application uses
 
-In addition, for a completely 'relocatable' script, add the following eight
-lines to the very top of a Perl script. Place a copy of PTools::Local in the
-directory generated in the 'use lib' line and this module will figure out
-the rest. After this, as long as a relative directory structure is 
+If you have other, legacy Perl library path(s) to include, you can add
+them either just above or just below the B<use PTools::Local> line.
+Above, and it/they will appear between app lib paths and system paths.
+Below, and it/they will appear at the very top of your @INC paths.
+(If it's confusing at first, try B<print PTools::Local->dump('incpaths')>
+and it will soon become obvious what's happening.)
+
+For B<completely> 'relocatable' scripts, just add the first seven lines,
+below, to the very top of a Perl script. The PTools::Local class will
+figure out the rest. Then, as long as a relative directory structure is 
 maintained, your Perl scripts and modules can move to other locations 
 without changing a thing.
 
   use Cwd;
-  BEGIN {  # With the following addition, script is relocatable.
+  BEGIN {  # Script is relocatable. See http://ccobb.net/ptools/
     my $cwd = $1 if ( $0 =~ m#^(.*/)?.*# );  chdir( "$cwd/.." );
     my($top,$app)=($1,$2) if ( getcwd() =~ m#^(.*)(?=/)/?(.*)#);
     $ENV{'PTOOLS_TOPDIR'} = $top;  $ENV{'PTOOLS_APPDIR'} = $app;
   } #-----------------------------------------------------------
-  use lib "$ENV{'PTOOLS_TOPDIR'}/$ENV{'PTOOLS_APPDIR'}/lib";
-  use PTools::Local;
+  use PTools::Local;          # PTools local/global vars/methods
 
-  use MyMain::Module;
-  $result = run MyMain::Module();
-  exit( $result ||0 );
+  use MyMain::Module;          # then your script starts here #  
+  exit( run MyMain::Module() );
 
-For those who have moved to a pure OO environment, the above dozen lines
-represents a full and complete example of a script. It just acts as an 
-outer block to initiate the main module for some application.
+If you have moved to a pure OO environment, the above nine lines
+of code is a B<full and complete example> of a script. It just acts 
+as an outer block to initiate the main module for some application.
 
  [ While this class has been stable for many years, it needed some ]
  [ fairly significant changes to make it acceptable for submittal  ]
- [ to CPAN. If you have any problems, contact the author. Thanks.  ]
+ [ to CPAN. If you find any problems, contact the author. Thanks.  ]
 
 =head2 Constructor
 
@@ -468,7 +473,11 @@ base class.
 
  [ While this class has been stable for many years, it needed some ]
  [ fairly significant changes to make it acceptable for submittal  ]
- [ to CPAN. If you have any problems, contact the author. Thanks.  ]
+ [ to CPAN. If you find any problems, contact the author. Thanks.  ]
+
+Using this PTools::Local class sets the current working directory 
+to the I<parent> of where a given script is located. This is a
+necessary part of a 'self-locating' Perl script.
 
 Unfortunately, the PTools::Local class does not work well when running
 in a persistent B<mod_perl> environment. The original intent was for
@@ -491,11 +500,11 @@ See L<http://www.ccobb.net/ptools/>.
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>nospamplease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]
 
 =head1 COPYRIGHT
 
-Copyright (c) 1997-2002 by Chris Cobb. All rights reserved.
+Copyright (c) 1997-2007 by Chris Cobb. All rights reserved.
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 

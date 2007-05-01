@@ -21,8 +21,8 @@ data in a given application, or deciding what class is used to
 PTools also includes such things as 
 a module to handle the counters in an application (with nice formatting);
 a module to easily turn a script into a daemon process; 
-a module to temporarialy redirect stdout and/or stderr to a string or an array;
-OO interfaces to Getopt::Long, Date::Format and Date::Parse 
+a module to temporarialy redirect stdout and/or stderr to a string or an 
+array; OO interfaces to Getopt::Long, Date::Format and Date::Parse 
 (with some added value).
 
 See example scripts under the 'eg' subdirectory included with this 

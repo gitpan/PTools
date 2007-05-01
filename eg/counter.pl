@@ -99,7 +99,7 @@ print "\n";
 
 __END__
 
-# Some time format examples suported by the 'PTools::Date::Format' class
+# Some time format examples suported by the 'Date::Format' class
 #
 # $ctr->tmFormat( "%c" );                        # 12/21/05 09:05:39
 # $ctr->tmFormat( "%a, %d-%b-%Y %I:%M:%S %p" );  # Wed, 21-Dec-2005 09:05:39 pm

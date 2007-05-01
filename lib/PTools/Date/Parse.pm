@@ -2,7 +2,6 @@
 #
 # File:  PTools/Date/Parse.pm
 # Desc:  Provides object oriented interface to the "Date::Parse" class
-# Auth:  Chris Cobb <nospamplease@ccobb.net>
 # Date:  Tue Jul 13 14:22:31 2004
 # Stat:  Production
 #
@@ -56,7 +55,7 @@ See L<Date::Parse>.
 
 =head1 AUTHOR
 
-Chris Cobb, E<lt>nospamplease@ccobb.netE<gt>
+Chris Cobb [no dot spam at ccobb dot net]
 
 =head1 COPYRIGHT
 

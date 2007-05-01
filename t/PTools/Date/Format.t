@@ -3,7 +3,16 @@
 
 #########################
 
-use Test::More tests => 3;
+###use Test::More tests => 3;
+
+use Test::More;
+BEGIN { 
+    eval "require Date::Format";
+    if (! defined $INC{'Date/Format.pm'} ) {
+       plan skip_all => "dependency/ies not met";
+    }
+    plan tests => 3;
+}
 
 BEGIN { use_ok('PTools::Date::Format', "date1") };              # 01
 

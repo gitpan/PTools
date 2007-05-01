@@ -1,0 +1,23 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name: PTools
+version: 0.02
+author:
+ - 'Chris Cobb [no dot spam at ccobb dot net]'
+abstract: Tools for Perl Tools Designers
+license: perl
+requires:
+    Carp:                          0
+    Date::Format:                  2.22
+    Date::Parse:                   2.23
+    Exporter:                      0
+    Fcntl:                         0
+    Getopt::Long:                  2.17
+    POSIX:                         0
+    strict:                        0
+    Test::More:                    0
+    warnings:                      0
+no_index:
+  directory:
+    - inc
+    - t

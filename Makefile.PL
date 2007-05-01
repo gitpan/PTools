@@ -4,16 +4,17 @@
 # Desc:  Make the makefile for the PTools distribution
 # Date:  Sat Mar 17 14:01:49 2007
 #
-use inc::Module::Install;
+use inc::Module::Install;  # Warn: mods to Makefile.pm/WriteAll.pm
 
 name		'PTools';
-author		'Chris Cobb <nospamplease@ccobb.net>';
+abstract	'Tools for Perl Tool Developers';
+author		'Chris Cobb [no dot spam at ccobb dot net]';
 license 	'perl';
 all_from	'lib/PTools.pm';
 tests		't/*.t t/*/*.t t/*/*/*.t';
 
 # When building this distribution
-no_index	directory 	=> 'eg';
+#no_index	directory 	=> 'eg';
 build_requires	Test::More	=> 0;
 
 # Standard modules needed
@@ -29,4 +30,4 @@ requires 	Date::Format	=> 2.22;
 requires 	Date::Parse	=> 2.23;
 requires 	Getopt::Long	=> 2.17;
 
-WriteAll();
+WriteAll( meta => 0 );
